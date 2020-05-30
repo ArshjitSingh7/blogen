@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eea51bea51.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+    <title>Blogen</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Blogen</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navcollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcollapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="post.html" class="nav-link">Posts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="categories.html" class="nav-link">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="user.html" class="nav-link">Users</a>
+                </li>
+            </ul>
+            <ul class="ml-auto navbar-nav">
+                <li class="nav-item dropdown mr-2">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user"></i>Welcome Arshjit</a>
+                    <div class="dropdown-menu">
+                        <a href="profile.html" class="dropdown-item"><i class="fas fa-user mr-2"></i>Profile</a>
+                        <a href="setting.html" class="dropdown-item"><i class="fas fa-cog mr-2"></i>Settings</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <section id="header" class="bg-primary text-white py-3">
+        <div class="container">
+            <h1><i class="fas fa-cog mr-2"></i>Dashboard</h1>
+        </div>
+    </section>
+
+    <section id="links" class="py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-2">
+                    <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#activecollapse"><i class="fas fa-plus"></i> Add Post</button>
+                    <div class="modal" id="activecollapse">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary text-white">
+                                    <h3>Add Post</h3>
+                                    <button class="close" data-dismiss="modal">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label>Title</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Category</label>
+                                            <select class="form-control">
+                                                <option>Web Development</option>
+                                                <option>Mobile Development</option>
+                                                <option>CSS</option>
+                                                <option>HTML</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Upload Image</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input">
+                                                <label for="" class="custom-file-label">Choose File</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Body</label>
+                                            <input type="text" name="editor1">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <button class="btn btn-success btn-block" data-toggle="modal" data-target="#categorycollapse"><i class="fas fa-plus"></i> Add Category</button>
+                    <div class="modal" id="categorycollapse">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header bg-success text-white">
+                                    <h3>Add Category</h3>
+                                    <button class="close" data-dismiss="modal">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label>Add Category</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-Success" data-dismiss="modal">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <button class="btn btn-warning btn-block" data-toggle="modal" data-target="#usercollapse"><i class="fas fa-plus"></i> Add User</button>
+                    <div class="modal" id="usercollapse">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header bg-warning text-white">
+                                    <h3>Add User</h3>
+                                    <button class="close" data-dismiss="modal">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="email" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Confirm Password</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-warning" data-dismiss="modal">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-4" id="posts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Latest Posts</h4>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Title</th>
+                                        <th>Category</th>
+                                        <th>Date</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Post 1</td>
+                                        <td>Web Development</td>
+                                        <td>26 may,2020</td>
+                                        <td><a href="detail.html" class="btn btn-primary">Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Post Two</td>
+                                        <td>Web Development</td>
+                                        <td>22 may,2020</td>
+                                        <td><a href="detail.html" class="btn btn-primary">Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Post Three</td>
+                                        <td>Web Development</td>
+                                        <td>21 may,2020</td>
+                                        <td><a href="detail.html" class="btn btn-primary">Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Post Four</td>
+                                        <td>Web Development</td>
+                                        <td>16 may,2020</td>
+                                        <td><a href="detail.html" class="btn btn-primary">Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Post Five</td>
+                                        <td>Web Development</td>
+                                        <td>16 may,2020</td>
+                                        <td><a href="detail.html" class="btn btn-primary">Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Post Six</td>
+                                        <td>Web Development</td>
+                                        <td>10 may,2020</td>
+                                        <td><a href="detail.html" class="btn btn-primary">Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Post Seven</td>
+                                        <td>Web Development</td>
+                                        <td>1 may,2020</td>
+                                        <td><a href="detail.html" class="btn btn-primary">Details</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-primary text-white mb-3">
+                        <div class="card-body text-center">
+                            <h3>Posts</h3>
+                            <h1 class="display-4"><i class="fas fa-pencil-alt"></i> 7</h1>
+                            <a href="post.html" class="btn btn-sm text-white ">View</a>
+                        </div>
+                    </div>
+                    <div class="card bg-success text-white mb-3">
+                        <div class="card-body text-center">
+                            <h3>Category</h3>
+                            <h1 class="display-4"><i class="fas fa-folder"></i> 5</h1>
+                            <a href="post.html" class="btn btn-sm text-white ">View</a>
+                        </div>
+                    </div>
+                    <div class="card bg-warning text-white mb-3">
+                        <div class="card-body text-center">
+                            <h3>Posts</h3>
+                            <h1 class="display-4"><i class="fas fa-users"></i> 3</h1>
+                            <a href="post.html" class="btn btn-sm text-white ">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="py-1 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>&copy; Copyright,2020</p>
+                </div>
+        </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'editor1' );
+    </script>
+</body>
+</html>
